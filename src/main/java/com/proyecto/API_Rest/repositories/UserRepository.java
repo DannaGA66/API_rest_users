@@ -10,4 +10,5 @@ import com.proyecto.API_Rest.models.UserModel;
 @Repository 
 public interface UserRepository extends CrudRepository<UserModel, Long>{
     public abstract ArrayList<UserModel> findByPriority(Integer priority);
+    
 }

@@ -1,6 +1,7 @@
 package com.proyecto.API_Rest.services;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,5 +20,22 @@ public class UserService {
 
     public UserModel saveUser(UserModel user){
         return userRepository.save(user);
+    }
+
+    public Optional<UserModel> GetById(Long id){
+        return userRepository.findById(id);
+    }
+
+    public ArrayList<UserModel> GetByPriority(Integer priority){
+        return userRepository.findByPriority(priority);
+    }
+
+    public boolean deleteUser(Long id){
+        try{
+            userRepository.deleteById(id);
+            return true;
+        }catch(Exception err){
+            return false;
+        }
     }
 }

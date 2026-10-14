@@ -33,10 +33,10 @@ public class UserModel {
     public void setEmail(String email) {
         this.email = email;
     }
-    public Integer getpriority() {
+    public Integer getPriority() {
         return priority;
     }
-    public void setpriority(Integer priority) {
+    public void setPriority(Integer priority) {
         this.priority = priority;
     }
 }
